@@ -1,0 +1,20 @@
+{
+  "name": "wedding-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "@sequelize/sqlite3": "^7.0.0-alpha.45",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "sequelize": "^6.37.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "init-db": "node init-db.js"
+  }
+}
