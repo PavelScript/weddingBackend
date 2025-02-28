@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const cors = require('cors');
 const { Sequelize } = require('sequelize');
 
@@ -50,9 +50,9 @@ async function initializeDatabase() {
 
 // Initialize the database and start the server
 initializeDatabase().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-  });
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 });
 
 // GET /guests: Show all guests' responses
